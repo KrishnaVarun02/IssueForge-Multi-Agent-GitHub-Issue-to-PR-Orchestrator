@@ -1,4 +1,5 @@
-# Multi-Agent Orchestration System
+# IssueForge — Multi-Agent GitHub Issue-to-PR Orchestrator
+
 
 [![Continuous integration](https://github.com/KrishnaVarun02/Multi-Agent-Orchestration-System/actions/workflows/ci.yml/badge.svg)](https://github.com/KrishnaVarun02/Multi-Agent-Orchestration-System/actions/workflows/ci.yml)
 
