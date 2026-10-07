@@ -1,0 +1,16 @@
+FROM python:3.13-slim
+
+WORKDIR /workspace
+
+RUN apt-get update \
+    && apt-get install --yes --no-install-recommends git \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements.txt requirements-dev.txt /tmp/dependencies/
+RUN python -m pip install --no-cache-dir \
+    -r /tmp/dependencies/requirements-dev.txt
+
+RUN useradd --create-home --uid 10001 runner
+USER runner
+
+ENTRYPOINT ["python", "-m", "pytest"]
